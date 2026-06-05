@@ -1,0 +1,40 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <h5 class="card-title">分页</h5>
+        <nav aria-label="页码导航">
+            <ul class="pagination">
+                {% if pageInfo.hasPreviousPage %}
+                    <li class="page-item">
+                        <a class="page-link" href="/产品-page-{{ pageInfo.previousPage }}">上一页</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">上一页</span>
+                    </li>
+                {% endif %}
+
+                {% for page in pageRange %}
+                    {% if page == currentPage %}
+                        <li class="page-item active">
+                            <span class="page-link">{{ page }}</span>
+                        </li>
+                    {% else %}
+                        <li class="page-item">
+                            <a class="page-link" href="/产品-page-{{ page }}">{{ page }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if pageInfo.hasNextPage %}
+                    <li class="page-item">
+                        <a class="page-link" href="/产品-page-{{ pageInfo.nextPage }}">下一页</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">下一页</span>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>

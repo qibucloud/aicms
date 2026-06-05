@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-lg-9">
+        <h1>{{ title }}</h1>
+        <p class="lead">{{ description }}</p>
+        
+        {{ content }}
+
+        <h2 class="mt-5">为什么选择 AICMS？</h2>
+        <ul>
+            <li><strong>高性能：</strong>使用 .NET 10 AOT 编译技术，确保最快的加载速度</li>
+            <li><strong>多语言：</strong>原生支持中文、英文和日文</li>
+            <li><strong>灵活的模板：</strong>基于 Liquid 模板引擎的完全可定制设计</li>
+            <li><strong>易于使用：</strong>直观的界面和强大的功能</li>
+            <li><strong>可扩展：</strong>模块化架构，支持自定义扩展</li>
+        </ul>
+
+        <h2 class="mt-5">联系我们</h2>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">姓名</label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">邮箱</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">信息</label>
+                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">发送</button>
+        </form>
+    </div>
+    <div class="col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">快速链接</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/关于">关于</a></li>
+                    <li><a href="/产品">产品</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

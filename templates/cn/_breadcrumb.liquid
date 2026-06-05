@@ -1,0 +1,13 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">首页</a></li>
+        {% if page == 'about' %}
+            <li class="breadcrumb-item active">关于</li>
+        {% elsif page == 'products' %}
+            <li class="breadcrumb-item active">产品</li>
+            {% if currentPage > 1 %}
+                <li class="breadcrumb-item">第 {{ currentPage }} 页</li>
+            {% endif %}
+        {% endif %}
+    </ol>
+</nav>
